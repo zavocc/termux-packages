@@ -6,7 +6,7 @@ TERMUX_PKG_VERSION=1:8.2.6
 TERMUX_PKG_REVISION=2
 TERMUX_PKG_SRCURL=https://download.qemu.org/qemu-${TERMUX_PKG_VERSION:2}.tar.xz
 TERMUX_PKG_SHA256=8cadb1e6b039954e672d4a7cc3a5f30738b4cb99bc92c2640b15cc89f8f91fa2
-TERMUX_PKG_DEPENDS="dtc, glib, libbz2, libcurl, libgmp, libgnutls, libiconv, libjpeg-turbo, liblzo, libnettle, libnfs, libpixman, libpng, libslirp, libspice-server, libusb, libusbredir, ncurses, pulseaudio, qemu-common, resolv-conf, zlib, zstd"
+TERMUX_PKG_DEPENDS="dtc, glib, libcurl, libgmp, libgnutls, libiconv, libjpeg-turbo, liblzo, libnettle, libnfs, libpixman, libpng, libslirp, libspice-server, libusb, libusbredir, ncurses, qemu-common, resolv-conf, zlib, zstd"
 TERMUX_PKG_BUILD_DEPENDS="dtc-static, libcurl-static, libgmp-static, libgnutls-static, libiconv-static, libjpeg-turbo-static, liblzo-static, libnettle-static, libnfs-static, libpixman-static, libpng-static, libspice-server-static, libusb-static, libusbredir-static, ncurses-static, zlib-static, zstd-static"
 
 
@@ -88,7 +88,6 @@ termux_step_configure() {
 		--objcc="$CC" \
 		--disable-stack-protector \
 		--enable-coroutine-pool \
-		--audio-drv-list=pa \
 		--enable-trace-backends=nop \
 		--disable-guest-agent \
 		--enable-gnutls \
@@ -114,7 +113,7 @@ termux_step_configure() {
 		--enable-libnfs \
 		--enable-lzo \
 		--disable-snappy \
-		--enable-bzip2 \
+		--disable-bzip2 \
 		--disable-lzfse \
 		--disable-seccomp \
 		--disable-libssh \
