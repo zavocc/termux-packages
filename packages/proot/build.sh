@@ -4,11 +4,11 @@ TERMUX_PKG_DESCRIPTION="Emulate chroot, bind mount and binfmt_misc for non-root 
 TERMUX_PKG_LICENSE="GPL-2.0"
 TERMUX_PKG_MAINTAINER="Michal Bednarski @michalbednarski"
 # Just bump commit and version when needed:
-_COMMIT=228a5f28b078f4e2504de46758ce17948f73f507
+_COMMIT=44264b12deafb11c65e6429f1637bbe04c402d83
 TERMUX_PKG_VERSION=5.1.107
 TERMUX_PKG_REVISION=67
-TERMUX_PKG_SRCURL=https://github.com/termux/proot/archive/${_COMMIT}.zip
-TERMUX_PKG_SHA256=39ed5eeb6ebde37be8e53591c670bf35d05869f196eff697c8dd1c20af3c0034
+TERMUX_PKG_SRCURL=https://github.com/zavocc/proot/archive/${_COMMIT}.zip
+TERMUX_PKG_SHA256=bdcb132963b835b44b5148cc704da345214c240a4340faf6f0cbad995c8a6ecf
 TERMUX_PKG_AUTO_UPDATE=false
 TERMUX_PKG_DEPENDS="libtalloc"
 TERMUX_PKG_SUGGESTS="proot-distro"
